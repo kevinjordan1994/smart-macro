@@ -7,5 +7,40 @@
     <script type="module" src="app.js"></script>
     <title>Smart Macro</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Smart Macro</h1>
+    <form method="post">
+      <label>Ingredients</label>
+      <input type="text" class="ingredients-input" />
+      <label>Calories</label>
+      <input type="text" class="calories-input" />
+      <label>Protein</label>
+      <input type="text" class="protein-input" />
+      <label>Fat</label>
+      <input type="text" class="fat-input" />
+      <label>Carbs</label>
+      <input type="text" class="carbs-input" />
+      <button class="find-meals-btn">Find Meals</button>
+    </form>
+    <div class="meals-container">
+      <div class="meal">
+        <h1 class="title">Chinese Beef and Broccoli</h1>
+        <img
+          src="https://spoonacular.com/recipeImages/1697733-312x231.jpg"
+          alt="Chinese Beef and Broccoli"
+        />
+        <ul class="nutrition">
+          <li class="calories">300 cal</li>
+          <li class="protein">20g protein</li>
+          <li class="fat">10g fat</li>
+          <li class="carbs">20g carbs</li>
+        </ul>
+        <a
+          href="https://maplewoodroad.com/chinese-beef-broccoli/"
+          target="_blank"
+          >Recipe</a
+        >
+      </div>
+    </div>
+  </body>
 </html>
