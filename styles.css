@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #990000;
+  --secondary: #ff5b00;
+  --second-lightest: #d4d925;
+  --lightest: #ffee63;
+}
+
+body {
+  background-color: #fefefe;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--primary);
+  width: max-content;
+  margin: 5% auto 3%;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10%;
+  padding: 0 10%;
+}
+
+.ui-container {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.nutrition-inputs-container {
+  display: flex;
+}
+
+.user-input-form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 80%;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+textarea {
+  font-size: 1.5rem;
+}
+
+.find-meals-btn {
+  margin-top: 2rem;
+  border: solid var(--primary);
+  background-color: var(--primary);
+  color: #fefefe;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+}
+
+.find-meals-btn:hover {
+  cursor: pointer;
+  border: solid var(--primary);
+  background-color: #fefefe;
+  color: var(--primary);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+}
+
+/* MEAL CONTAINER */
+.meals-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+}
+
+.meal {
+  box-shadow: 0 10px 30px rgba(34, 34, 34, 0.176);
+}
+
+.meal h2 {
+  text-align: center;
+  color: var(--primary);
+}
+
+.meal ul {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.meal ul:first-child {
+  padding-top: 1rem;
+}
+
+.meal li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.meal a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--secondary);
+  font-weight: 700;
+  padding: 2%;
+}
+
+.meal img {
+  width: 100%;
+}
