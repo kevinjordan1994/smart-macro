@@ -4,42 +4,117 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700;800&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script type="module" src="app.js"></script>
     <title>Smart Macro</title>
   </head>
   <body>
-    <h1>Smart Macro</h1>
-    <form method="post">
-      <label>Ingredients</label>
-      <input type="text" class="ingredients-input" />
-      <label>Calories</label>
-      <input type="text" class="calories-input" />
-      <label>Protein</label>
-      <input type="text" class="protein-input" />
-      <label>Fat</label>
-      <input type="text" class="fat-input" />
-      <label>Carbs</label>
-      <input type="text" class="carbs-input" />
-      <button class="find-meals-btn">Find Meals</button>
-    </form>
-    <div class="meals-container">
-      <div class="meal">
-        <h1 class="title">Chinese Beef and Broccoli</h1>
-        <img
-          src="https://spoonacular.com/recipeImages/1697733-312x231.jpg"
-          alt="Chinese Beef and Broccoli"
-        />
-        <ul class="nutrition">
-          <li class="calories">300 cal</li>
-          <li class="protein">20g protein</li>
-          <li class="fat">10g fat</li>
-          <li class="carbs">20g carbs</li>
-        </ul>
-        <a
-          href="https://maplewoodroad.com/chinese-beef-broccoli/"
-          target="_blank"
-          >Recipe</a
-        >
+    <h1>smart macro</h1>
+    <div class="app-container">
+      <div class="ui-container">
+        <form method="post">
+          <div class="input-field">
+            <label>Ingredients</label>
+            <textarea
+              name="Ingredients"
+              class="ingredients-input"
+              cols="30"
+              rows="3"
+              placeholder="Ex: chicken rice onions"
+            ></textarea>
+          </div>
+          <div class="nutrition-inputs-container">
+            <div class="user-input-form">
+              <div class="input-field">
+                <label>Min Calories</label>
+                <input
+                  type="text"
+                  class="calories-input-min"
+                  placeholder="Ex: 0"
+                />
+              </div>
+              <div class="input-field">
+                <label>Min Protein</label>
+                <input type="text" class="protein-input-min" />
+              </div>
+              <div class="input-field">
+                <label>Min Fat</label>
+                <input type="text" class="fat-input-min" />
+              </div>
+              <div class="input-field">
+                <label>Min Carbs</label>
+                <input type="text" class="carbs-input-min" />
+              </div>
+            </div>
+            <div class="user-input-form">
+              <div class="input-field">
+                <label>Max Calories</label>
+                <input
+                  type="text"
+                  class="calories-input"
+                  placeholder="Ex: 1000"
+                />
+              </div>
+              <div class="input-field">
+                <label>Max Protein</label>
+                <input type="text" class="protein-input" />
+              </div>
+              <div class="input-field">
+                <label>Max Fat</label>
+                <input type="text" class="fat-input" />
+              </div>
+              <div class="input-field">
+                <label> Max Carbs</label>
+                <input type="text" class="carbs-input" />
+              </div>
+            </div>
+          </div>
+          <button class="find-meals-btn">Find Meals</button>
+        </form>
+      </div>
+      <div class="meals-container">
+        <!-- <div class="meal">
+          <h2 class="title">Chinese Beef and Broccoli</h2>
+          <img
+            src="https://spoonacular.com/recipeImages/1697733-312x231.jpg"
+            alt="Chinese Beef and Broccoli"
+          />
+          <ul class="nutrition">
+            <li class="calories">300 cal</li>
+            <li class="protein">20g protein</li>
+            <li class="fat">10g fat</li>
+            <li class="carbs">20g carbs</li>
+          </ul>
+          <a
+            href="https://maplewoodroad.com/chinese-beef-broccoli/"
+            target="_blank"
+            >Recipe</a
+          >
+        </div>
+        <div class="meal">
+          <h2 class="title">Chinese Beef and Broccoli</h2>
+          <img
+            src="https://spoonacular.com/recipeImages/1697733-312x231.jpg"
+            alt="Chinese Beef and Broccoli"
+          />
+          <ul class="nutrition">
+            <li class="calories">300 cal</li>
+            <li class="protein">20g protein</li>
+            <li class="fat">10g fat</li>
+            <li class="carbs">20g carbs</li>
+          </ul>
+          <a
+            href="https://maplewoodroad.com/chinese-beef-broccoli/"
+            target="_blank"
+            >Recipe</a
+          >
+        </div> -->
       </div>
     </div>
   </body>

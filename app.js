@@ -30,7 +30,7 @@ function generateURL(
 
 function generateMealHTML(meal) {
   return `<div class="meal">
-  <h1 class="title">${meal.title}</h1>
+  <h2 class="title">${meal.title}</h2>
   <img
     src=${meal.imageURL}
     alt=${meal.title}
@@ -77,6 +77,10 @@ function findMeals() {
           carbs: Math.round(meal.nutrition.nutrients[3].amount),
         })
       );
+      meals.forEach((meal) => {
+        let html = generateMealHTML(meal);
+        mealsContainer.insertAdjacentHTML(`beforeend`, html);
+      });
       console.log(meals);
     });
 }
