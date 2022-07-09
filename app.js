@@ -1,8 +1,7 @@
 `use strict`;
 
 //Config Variables
-const BASE_URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=`;
-const API_KEY = `43a4dc69a4194fc9ae128504366e5e35`;
+import { BASE_URL, API_KEY } from "./config.js";
 let meals = [];
 
 //DOM Elements
@@ -11,21 +10,35 @@ const caloriesInput = document.querySelector(`.calories-input`);
 const proteinInput = document.querySelector(`.protein-input`);
 const fatInput = document.querySelector(`.fat-input`);
 const carbsInput = document.querySelector(`.carbs-input`);
+const caloriesInputMin = document.querySelector(`.calories-input-min`);
+const proteinInputMin = document.querySelector(`.protein-input-min`);
+const fatInputMin = document.querySelector(`.fat-input-min`);
+const carbsInputMin = document.querySelector(`.carbs-input-min`);
 const findMealsBtn = document.querySelector(`.find-meals-btn`);
 const mealsContainer = document.querySelector(`.meals-container`);
 
 function generateURL(
+  // minCalories = 0,
   calories = 0,
+  // minCarbs = 0,
   carbs = 0,
+  // minFat = 0,
   fat = 0,
+  // minProtein = 0,
   protein = 0,
   ingredients = ``
 ) {
   return (
     BASE_URL +
     API_KEY +
+    // `&minCalories=${minCalories}&minCarbs=${minCarbs}&minFat=${minFat}&minProtein=${minProtein}` +
     `&maxCalories=${calories}&maxCarbs=${carbs}&maxFat=${fat}&maxProtein=${protein}&includeIngredients=${ingredients}&addRecipeInformation=true`
   );
+}
+
+function clearMeals() {
+  meals = [];
+  mealsContainer.innerHTML = ``;
 }
 
 function generateMealHTML(meal) {
@@ -54,14 +67,22 @@ function formatUserString(str) {
   return strLower.split(` `).join(`,`);
 }
 
+//TODO: Figure out how to get min calories to work
+//TODO: Make this an async function
 function findMeals() {
+  clearMeals();
   const resultsURL = generateURL(
+    // +caloriesInputMin.value,
     +caloriesInput.value,
+    // +carbsInputMin.value,
     +carbsInput.value,
+    // +fatInputMin.value,
     +fatInput.value,
+    // +proteinInputMin.value,
     +proteinInput.value,
     formatUserString(ingredientsInput.value)
   );
+  console.log(resultsURL);
   fetch(resultsURL)
     .then((res) => res.json())
     .then((data) => {
