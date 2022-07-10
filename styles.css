@@ -153,3 +153,59 @@ textarea {
   width: 100%;
   border-radius: 1rem;
 }
+
+/* MEDIA BREAKPOINTS */
+@media (max-width: 1700px) {
+  .meals-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3%;
+    padding: 0 10%;
+    /* REMEMBER THIS TO KEEP EMPTY ROWS FROM HAPPENING */
+    align-items: start;
+    margin-bottom: 5%;
+  }
+
+  .meals-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .meals-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .app-container {
+    gap: 2%;
+    /* TODO: why does this not work? */
+    margin-bottom: 7%;
+  }
+
+  .meals-container {
+    grid-template-columns: 1fr;
+    gap: 2%;
+  }
+
+  .header-container {
+    margin-bottom: 10%;
+  }
+
+  .meals-container,
+  .ui-container {
+    width: 380px;
+    margin: 0 auto;
+  }
+
+  textarea {
+    font-size: 1rem;
+  }
+}

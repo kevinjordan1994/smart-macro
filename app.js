@@ -10,10 +10,10 @@ const caloriesInput = document.querySelector(`.calories-input`);
 const proteinInput = document.querySelector(`.protein-input`);
 const fatInput = document.querySelector(`.fat-input`);
 const carbsInput = document.querySelector(`.carbs-input`);
-const caloriesInputMin = document.querySelector(`.calories-input-min`);
-const proteinInputMin = document.querySelector(`.protein-input-min`);
-const fatInputMin = document.querySelector(`.fat-input-min`);
-const carbsInputMin = document.querySelector(`.carbs-input-min`);
+// const caloriesInputMin = document.querySelector(`.calories-input-min`);
+// const proteinInputMin = document.querySelector(`.protein-input-min`);
+// const fatInputMin = document.querySelector(`.fat-input-min`);
+// const carbsInputMin = document.querySelector(`.carbs-input-min`);
 const findMealsBtn = document.querySelector(`.find-meals-btn`);
 const mealsContainer = document.querySelector(`.meals-container`);
 
