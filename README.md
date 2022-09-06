@@ -12,7 +12,7 @@ A user can specify ingredients as well as maximum amounts of:
 - Carbs
 
 ### Known Issues/TODOs
-1. ~~The app is not yet responsive for smaller screens.~~ Done!
+1. The app is not yet responsive for smaller screens.
 2. Add meal planning feature that gives users a list of meals that fit into their daily diet needs.
 
 ### [Try it here!](https://kevinjordan1994.github.io/smart-macro/)
